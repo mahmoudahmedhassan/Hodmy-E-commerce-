@@ -1,0 +1,51 @@
+.filters{
+    margin:50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+.filters h1{
+    margin: 30px 0 30px 0;
+    text-transform: capitalize;
+}
+.filters_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.serach{
+    margin-right: 30px;
+
+}
+.serach input{
+    border: 2px solid #000;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+
+ }
+ .filters_category select{
+    border: 2px solid #000;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+/* .filters_category select option{
+    color: white;
+    background: black;
+    padding: 10px;
+} */
+@media(max-width:425px) {
+    .serach input, .filters_category select{
+        width: 150px;
+     } 
+     .serach{
+        margin-right: 10px;
+    }
+}

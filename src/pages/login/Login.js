@@ -12,6 +12,8 @@ function Login(){
   const auth = getAuth();
   const navigate = useNavigate();
   const dispatch = useDispatch()
+  const [loading, setLoading] = useState(false);
+
 
   // const [user, setUser] = useState(null);
 
@@ -19,8 +21,11 @@ function Login(){
     e.preventDefault();
 
      try {
+      setLoading(true)
       await signInWithEmailAndPassword(auth,email,password);
      toast.success("Registration successfully 👌",{position:'top-right'})
+     setLoading(false);
+
       navigate('/')
     } catch (error) {
       toast.error(error.message,{position:'top-right'})
@@ -84,7 +89,9 @@ function Login(){
                   <button 
                   className={classes.form_login_submit} 
                   onClick={(e)=>loginUser(e)}
-                  >Login</button>
+                  >
+                   {loading ? "loading..." : 'Log Out'}
+                  </button>
                 </div>
               </div>
 

@@ -3,13 +3,6 @@ import classes from './style.module.css'
 import { Col } from 'react-bootstrap';
 import Skeleton from 'react-loading-skeleton';
 
-export const Loading = () => {
-    return (
-
-    <div className={classes.lds_ring}><div></div><div></div><div></div><div></div></div>
-    )
-}
-
 export const LoadingProducts = () => {
     return (
         <>

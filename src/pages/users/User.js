@@ -48,7 +48,7 @@ function User() {
           {item.title}
         </div>
         <div>
-          {item.price * item.counter}$
+          {item.price * item.counter} $
         </div>
 
       </div>

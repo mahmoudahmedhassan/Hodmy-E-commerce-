@@ -16,16 +16,16 @@ function Reigster() {
 
   const registerUser = async (e) => {
     e.preventDefault()
-    setLoading(true);
-    try {
+    try { 
+      setLoading(true);
       await createUserWithEmailAndPassword(auth, email, password );
       setLoading(false);
       toast.success("Registration successfully 👌", { position: 'top-right' })
       navigate('/login')
+      setLoading(false);
 
     } catch (error) {
       console.log(error)
-      setLoading(false);
       toast.error(error.message, { position: 'top-right' })
     }
   };
@@ -65,10 +65,10 @@ function Reigster() {
                   type="submit"
                   onClick={(e) => registerUser(e)}
                 >
-                  Register
+                  {loading ? "loading..." : 'Register'}
                 </button>
 
-                <Link to={'/login'}>go to login</Link>
+                <Link to={'/login'}> Go to login</Link>
 
               </div>
             </form>

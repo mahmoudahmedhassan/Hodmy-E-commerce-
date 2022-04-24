@@ -23,7 +23,7 @@ function Home() {
   const [serach, setSerach] = useState('');
   const [selectCategory, setSelectCategory] = useState();
   const [loading, setLoading] = useState(null);
-
+  console.log(selectCategory)
   const navigation = useNavigate()
   useEffect(() => {
     getData()
@@ -43,14 +43,12 @@ function Home() {
       });
       setData(productsArray)
       setLoading(false);
-
     }
-
     catch (err) {
       console.log(err);
     }
   }
-  
+
   return (
     <Layout>
 
@@ -65,24 +63,25 @@ function Home() {
 
       <Container style={{ marginBottom: '50px' }}>
         <Row>
+
           {loading ? LoadingProducts() :
 
+            // eslint-disable-next-line array-callback-return
             data.filter((el) => {
               if (serach === '' && !selectCategory) {
                 return el
               } else if (
-                (el.title.toLowerCase().includes(serach.toLowerCase())
-                  , el.category === selectCategory)) {
+                (el.title.toLowerCase().includes(serach)
+                ,el.category === selectCategory)) {
                 return el
               }
-            }).map((el) => (
+            })
+             .map((el) => (
               <Col sm={6} md={4} lg={3} key={el.id} text-center>
                 <div className={classes.card}>
                   <div className={classes.card_imge}>
-                    {
-                      el.image ? <img src={el.image} alt={el.title} height='300px' width='300px' /> : <span>loading...</span>
-                    }
-                  </div>
+                      <img src={el.image} alt={el.title} height='300px' width='300px' />  
+                   </div>
 
                   <div className={classes.card_body}>
                     <p>{el.title}</p>
@@ -91,37 +90,35 @@ function Home() {
                       <button onClick={() => navigation(`/product/${el.id}`)} > details</button>
                     </div>
 
-                  </div>
-                </div>
-
-              </Col>
-            ))}
-
-
-          {/* {loading ? Loading():null}
-
-          {
-          data.filter((el) => el.title.toLowerCase().includes(serach))
-            .filter((el) => el.category.toLowerCase().includes(selectCategory))
-            .map((el) => (
-
-              <Col sm={6} md={4} lg={3} key={el.id} text-center>
-                <div className={classes.card}>
-                  <div className={classes.card_imge}>
-                    <img src={el.image} alt={el.title} height='300px' width='300px' />
-                  </div>
-
-                  <div className={classes.card_body}>
-                    <p>{el.title}</p>
-                    <div className={classes.card_body_details}>
-                      <p>{el.price} $</p>
-                      <button onClick={() => navigation(`/product/${el.id}`)} > details</button>
-                    </div>
                   </div>
                 </div>
 
               </Col>
             ))
+            }
+
+          {/* {loading ? LoadingProducts() :
+
+            data.filter((el) => el.title.toLowerCase().includes(serach.toLowerCase()))
+              .filter((el) => el.category.includes(selectCategory))
+              .map((el) => (
+                <Col sm={6} md={4} lg={3} key={el.id} text-center>
+                  <div className={classes.card}>
+                    <div className={classes.card_imge}>
+                      <img src={el.image} alt={el.title} height='300px' width='300px' />
+                    </div>
+
+                    <div className={classes.card_body}>
+                      <p>{el.title}</p>
+                      <div className={classes.card_body_details}>
+                        <p>{el.price} $</p>
+                        <button onClick={() => navigation(`/product/${el.id}`)} >details</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </Col>
+              ))
           } */}
 
         </Row>

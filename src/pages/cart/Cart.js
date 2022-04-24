@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from 'react'
 import classes from './cart.module.css';
 import Layout from '../../layout/Layout';
-import CheckoutModal from '../checkout/CheckoutModal';
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col } from 'react-bootstrap';
 import { incrementProduct, decrementProduct, deleteProductFromCart, deleteAllProducts } from "../../redux/cartSlice"
@@ -15,8 +14,6 @@ function Cart() {
   const dispatch = useDispatch()
   const { cart } = useSelector(state => state.cart);
   const [totalPrice, setTotalPrice] = useState(0);
-
-  
 
   useEffect(() => {
      let total = 0;

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Hodmy-E-commerce-/static/css/main.1e93fa0c.chunk.css",
+    "main.js": "/Hodmy-E-commerce-/static/js/main.be1adbae.chunk.js",
+    "main.js.map": "/Hodmy-E-commerce-/static/js/main.be1adbae.chunk.js.map",
+    "runtime-main.js": "/Hodmy-E-commerce-/static/js/runtime-main.d1abff0d.js",
+    "runtime-main.js.map": "/Hodmy-E-commerce-/static/js/runtime-main.d1abff0d.js.map",
+    "static/css/2.99af0a1d.chunk.css": "/Hodmy-E-commerce-/static/css/2.99af0a1d.chunk.css",
+    "static/js/2.0de347cb.chunk.js": "/Hodmy-E-commerce-/static/js/2.0de347cb.chunk.js",
+    "static/js/2.0de347cb.chunk.js.map": "/Hodmy-E-commerce-/static/js/2.0de347cb.chunk.js.map",
+    "index.html": "/Hodmy-E-commerce-/index.html",
+    "static/css/2.99af0a1d.chunk.css.map": "/Hodmy-E-commerce-/static/css/2.99af0a1d.chunk.css.map",
+    "static/css/main.1e93fa0c.chunk.css.map": "/Hodmy-E-commerce-/static/css/main.1e93fa0c.chunk.css.map",
+    "static/js/2.0de347cb.chunk.js.LICENSE.txt": "/Hodmy-E-commerce-/static/js/2.0de347cb.chunk.js.LICENSE.txt",
+    "static/media/pexels-artem-beliaikin-994523.a320b93b.jpg": "/Hodmy-E-commerce-/static/media/pexels-artem-beliaikin-994523.a320b93b.jpg",
+    "static/media/pexels-dom-j-45982.2913e6a3.jpg": "/Hodmy-E-commerce-/static/media/pexels-dom-j-45982.2913e6a3.jpg",
+    "static/media/pexels-tembela-bohle-1884581.4bd07a83.jpg": "/Hodmy-E-commerce-/static/media/pexels-tembela-bohle-1884581.4bd07a83.jpg",
+    "static/media/pexels-ylanite-koppens-934063.6b4863c8.jpg": "/Hodmy-E-commerce-/static/media/pexels-ylanite-koppens-934063.6b4863c8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d1abff0d.js",
+    "static/css/2.99af0a1d.chunk.css",
+    "static/js/2.0de347cb.chunk.js",
+    "static/css/main.1e93fa0c.chunk.css",
+    "static/js/main.be1adbae.chunk.js"
+  ]
+}

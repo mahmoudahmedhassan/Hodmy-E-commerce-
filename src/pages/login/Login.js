@@ -69,7 +69,7 @@ function Login(){
                     id='email'
                     value={email}
                     onChange={(e)=>{setEmail(e.target.value)}}
-                    required='required'
+                    required
                   />
                 </div>
 
@@ -82,9 +82,9 @@ function Login(){
                   value={password}
                   onChange={(e)=>{setPassword(e.target.value)}}
                   required
-                   />
+                  />
                 </div>
-
+ 
                 <div>
                   <button 
                   className={classes.form_login_submit} 

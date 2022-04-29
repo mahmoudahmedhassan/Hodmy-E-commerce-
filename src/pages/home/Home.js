@@ -80,7 +80,7 @@ function Home() {
               <Col sm={6} md={4} lg={3} key={el.id} text-center>
                 <div className={classes.card}>
                   <div className={classes.card_imge}>
-                      <img src={el.image} alt={el.title} height='300px' width='300px' />  
+                      <img src={  el.image} alt={el.title} height='300px' width='300px' />  
                    </div>
 
                   <div className={classes.card_body}>

@@ -24,12 +24,13 @@ function Login(){
       setLoading(true)
       await signInWithEmailAndPassword(auth,email,password);
      toast.success("Registration successfully 👌",{position:'top-right'})
-     setLoading(false);
 
       navigate('/')
     } catch (error) {
       toast.error(error.message,{position:'top-right'})
      }
+     setLoading(false);
+
     setEmail('');
     setPassword('');
    }

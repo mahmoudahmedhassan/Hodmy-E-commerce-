@@ -107,12 +107,16 @@
          font-size: 1em;
      }
      .head_table_details{
-        justify-content: space-between;
+        justify-content: space-around;
          font-size: 1em;
      }
      .cart_details_container{
         justify-content: space-between;
         align-items: center;
+     }
+     .cart_details_products{
+        justify-content: space-around;
+
      }
      .cart_details_products_price{
          display:none;
@@ -125,9 +129,20 @@
      .cart_details_products_total{
          font-size: 1em;
      }
+     .checkout{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin-top: 50px;
+       margin-bottom: 50px;
+
+     }
      .checkout div{
         display: flex;
         flex-direction: column-reverse;
+        align-items: center;
+
      }
      .checkout p{
         font-size: 1em;

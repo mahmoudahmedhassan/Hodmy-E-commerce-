@@ -12,26 +12,23 @@ function Reigster() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
    const navigate = useNavigate();
-   const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
 
   const registerUser = async (e) => {
     e.preventDefault();
     if (email.includes(null)) {
-      setError("You cannot use an underscore");
-    } else {
-
-      setError(null);
-
+     } else {
        try { 
+        setLoading(true)
        await createUserWithEmailAndPassword(auth, email, password );
- 
       toast.success("Registration successfully 👌", { position: 'top-right' })
-
       navigate('/login')
     } catch (error) {
       console.log(error)
       toast.error(error.message, { position: 'top-right' })
     }
+    setLoading(false)
+
      }
 
    
@@ -54,8 +51,6 @@ function Reigster() {
                   onChange={(e) => { setEmail(e.target.value) }}
                   required
                 />
-                <p>{error}</p>
-
               </div>
               <div>
                 <label htmlFor="password">Password</label>
@@ -75,7 +70,7 @@ function Reigster() {
                   type="submit"
                   onClick={(e) => registerUser(e)}
                 >
-                  { 'Register'}
+                  {loading ? "Loading...": 'Register'}
                 </button>
 
                 <Link to={'/login'}> Go to login</Link>

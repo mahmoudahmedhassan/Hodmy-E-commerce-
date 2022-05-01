@@ -5,6 +5,7 @@
   height: 20px;
   margin: auto;
 }
+
 .lds_ring div {
   box-sizing: border-box;
   display: block;
@@ -39,7 +40,7 @@
   width: 500px;
   height: 400px;
 }
-
+ 
 @media (min-width: 300px) and (max-width: 514px) {
     .image_loading{
     width: 300px;

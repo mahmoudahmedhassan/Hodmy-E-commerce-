@@ -23,8 +23,8 @@ function Home() {
   const [serach, setSerach] = useState('');
   const [selectCategory, setSelectCategory] = useState();
   const [loading, setLoading] = useState(null);
-  console.log(selectCategory)
-  const navigation = useNavigate()
+  const navigation = useNavigate();
+
   useEffect(() => {
     getData()
   }, [])
@@ -120,7 +120,7 @@ function Home() {
                 </Col>
               ))
           } */}
-
+          
         </Row>
       </Container>
     </Layout>

@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router';
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../../firebase/firebase';
 import { Container, Row, Col } from 'react-bootstrap';
-
+ 
 function User() {
   const { user } = useSelector(state => state.user);
   const navigate = useNavigate();
@@ -38,6 +38,8 @@ function User() {
       console.log(err);
     }
   }
+  
+
   const ordersItems = orders && orders.map(order => (
     order.cart.map(item => (
       <div key={item.id} className={classes.ordershistory_items}>
@@ -49,11 +51,11 @@ function User() {
         </div>
         <div>
           {item.price * item.counter} $
-        </div>
-
+         </div>
       </div>
     ))
   ))
+  
 
   return (
     <Layout>
@@ -84,13 +86,11 @@ function User() {
               <Col>
                 {ordersItems}
               </Col>
-
-            </Row>
+             </Row>
           </div>
         </Container>
       }
-
-    </Layout>
+      </Layout>
   )
 }
 

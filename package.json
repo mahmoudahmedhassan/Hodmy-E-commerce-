@@ -1,6 +1,5 @@
 {
-  "homepage": "https://mahmoudahmedhassan.github.io/Hodmy-E-commerce-",
-  "name": "tisting-form-validation",
+   "name": "tisting-form-validation",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

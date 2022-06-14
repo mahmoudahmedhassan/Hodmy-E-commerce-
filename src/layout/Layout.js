@@ -7,7 +7,6 @@ function Layout(props) {
             <Header />
             <div>
                 {props.children}
-                  
             </div>
         </>
     )

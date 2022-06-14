@@ -91,7 +91,7 @@ function Login(){
                   className={classes.form_login_submit} 
                   onClick={(e)=>loginUser(e)}
                   >
-                   {loading ? "loading..." : 'Log Out'}
+                   {loading ? "loading..." : 'LogIn'}
                   </button>
                 </div>
               </div>

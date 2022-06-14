@@ -73,7 +73,7 @@ function Reigster() {
                   {loading ? "Loading...": 'Register'}
                 </button>
 
-                <Link to={'/login'}> Go to login</Link>
+                <Link to={'/login'}> go to login</Link>
 
               </div>
             </form>

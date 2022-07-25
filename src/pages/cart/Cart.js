@@ -34,7 +34,7 @@ function Cart() {
     return (<div className={classes.cart_details_container}>
       <Col xs={3} lg={6}>
         <div className={classes.cart_imgs}>
-          <img src={image} alt={title} height='100px' />
+          <img src={image} alt={title} height='100px' width='100px' />
         </div>
       </Col>
 
